@@ -1,0 +1,11 @@
+Model Information:
+* title:	mexican hat
+* source:	https://sketchfab.com/3d-models/mexican-hat-72ea4106ab1f4db297317650904c3628
+* author:	lemonsugus (https://sketchfab.com/lemonsugus)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "mexican hat" (https://sketchfab.com/3d-models/mexican-hat-72ea4106ab1f4db297317650904c3628) by lemonsugus (https://sketchfab.com/lemonsugus) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

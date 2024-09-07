@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-face-aframe.prod.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const lista = ["lentes", "sombrero", "sombrero2", "aretes", "bandera"];
+        const visibles = [false, false, false, false, false];
+        const establecerVisibilidad = (boton, entidades, visible) => {
+          if (visible) {
+            boton.classList.add("selected");
+          } else {
+            boton.classList.remove("selected");
+          }
+          entidades.forEach((entidad) => {
+            entidad.setAttribute("visible", visible);
+          });
+        };
+        lista.forEach((item, index) => {
+          const boton = document.querySelector("#" + item);
+          const entidades = document.querySelectorAll("." + item + "-entidad");
+          establecerVisibilidad(boton, entidades, visibles[index]);
+          boton.addEventListener("click", () => {
+            visibles[index] = !visibles[index];
+            establecerVisibilidad(boton, entidades, visibles[index]);
+          });
+        });
+      });
+    </script>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      .example-container {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .options-panel {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 15px;
+        z-index: 2;
+      }
+
+      .options-panel img {
+        border-radius: 10px;
+        border: solid 3px #ddd;
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        cursor: pointer;
+        transition: border-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .options-panel img:hover {
+        transform: scale(1.1);
+      }
+
+      .options-panel img.selected {
+        border-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="example-container">
+      <div class="options-panel">
+        <img id="sombrero" src="https://i.pinimg.com/564x/a3/72/9a/a3729a96dd558cbf856307aaeb0dcb1b.jpg" />
+        <img id="sombrero2" src="https://i.pinimg.com/564x/7a/f6/ef/7af6ef4da058f0df81901bcc5f16b056.jpg" />
+        <img id="lentes" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/examples/face-tracking/assets/glasses/thumbnail.png" />
+        <img id="aretes" src="https://i.pinimg.com/564x/dc/0a/27/dc0a2708bebb301c96954ba5b478dee2.jpg" />
+        <img id="bandera" src="https://i.pinimg.com/564x/98/65/af/9865afbfe0bbe67ca7269df0533f39df.jpg" />
+      </div>
+      <a-scene mindar-face embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+        <a-assets>
+          <a-asset-item id="modeloCabeza" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/examples/face-tracking/assets/sparkar/headOccluder.glb"></a-asset-item>
+          <a-asset-item id="modeloLentes" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/examples/face-tracking/assets/glasses/scene.gltf"></a-asset-item>
+          <a-asset-item id="modeloBandera" src="./modelos/mexican_flag/scene.gltf"></a-asset-item>
+          <a-asset-item id="modeloSombrero" src="./modelos/mexican_sombrero/scene.gltf"></a-asset-item>
+          <a-asset-item id="modeloSombrero2" src="./modelos/mexican_hat/scene.gltf"></a-asset-item>
+          <a-asset-item id="modeloAguacates" src="./modelos/aguacate.glb"></a-asset-item>
+        </a-assets>
+
+        <a-camera active="false" position="0 0 0"></a-camera>
+
+        <!-- Ocultador de cabeza -->
+        <a-entity mindar-face-target="anchorIndex: 168">
+          <a-gltf-model mindar-face-occluder position="0 -0.3 0.15" rotation="0 0 0" scale="0.065 0.065 0.065" src="#modeloCabeza"></a-gltf-model>
+        </a-entity>
+
+        <!-- Sombrero Mexicano -->
+        <a-entity mindar-face-target="anchorIndex: 10">
+          <a-gltf-model rotation="0 -0 0" position="0 -0.7 -1.2" scale="0.8 0.8 0.8" src="#modeloSombrero" class="sombrero-entidad" visible="false"></a-gltf-model>
+        </a-entity>
+
+        <!-- Sombrero 2 -->
+        <a-entity mindar-face-target="anchorIndex: 10">
+          <a-gltf-model rotation="0 -0 0" position="0 0.0 -0.7" scale="1.35 1.35 1.35" src="#modeloSombrero2" class="sombrero2-entidad" visible="false"></a-gltf-model>
+        </a-entity>
+
+        <!-- Lentes -->
+        <a-entity mindar-face-target="anchorIndex: 168">
+          <a-gltf-model rotation="0 -0 0" position="0 0 0" scale="0.01 0.01 0.01" src="#modeloLentes" class="lentes-entidad" visible="false"></a-gltf-model>
+        </a-entity>
+
+        <!-- Bandera Mexicana -->
+        <a-entity mindar-face-target="anchorIndex: 168">
+          <a-gltf-model rotation="0 0 0" position="0 0 -10" scale="1 1 1" src="#modeloBandera" class="bandera-entidad" visible="false"></a-gltf-model>
+        </a-entity>
+
+        <!-- Aretes -->
+        <a-entity mindar-face-target="anchorIndex: 127">
+          <a-gltf-model rotation="-0.1 -0 0" position="0 -0.3 -0.3" scale="1 1 1" src="#modeloAguacates" class="aretes-entidad" visible="false"></a-gltf-model>
+        </a-entity>
+        <a-entity mindar-face-target="anchorIndex: 356">
+          <a-gltf-model rotation="0.1 -0 0" position="0 -0.3 -0.3" scale="1 1 1" src="#modeloAguacates" class="aretes-entidad" visible="false"></a-gltf-model>
+        </a-entity>
+      </a-scene>
+    </div>
+  </body>
+</html>

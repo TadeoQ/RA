@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mexican Flag
+* source:	https://sketchfab.com/3d-models/mexican-flag-9f6eda070e4747cb8f1c1b9c11a05f0d
+* author:	SusiePhilpott (https://sketchfab.com/SusiePhilpott)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mexican Flag" (https://sketchfab.com/3d-models/mexican-flag-9f6eda070e4747cb8f1c1b9c11a05f0d) by SusiePhilpott (https://sketchfab.com/SusiePhilpott) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

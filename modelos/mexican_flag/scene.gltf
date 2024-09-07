@@ -1,0 +1,258 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 9806,
+      "max": [
+        410.313232421875,
+        241.98556518554688,
+        35.784690856933594
+      ],
+      "min": [
+        -408.36480712890625,
+        -209.11630249023438,
+        -24.865859985351563
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 117672,
+      "componentType": 5126,
+      "count": 9806,
+      "max": [
+        0.9960954785346985,
+        0.9943833947181702,
+        0.9999984502792358
+      ],
+      "min": [
+        -0.9986286163330078,
+        -0.9994008541107178,
+        -0.9999992847442627
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 9806,
+      "max": [
+        0.9999998807907104,
+        0.9576755166053772,
+        0.9998298287391663,
+        1.0
+      ],
+      "min": [
+        -0.9999983310699463,
+        -0.866966187953949,
+        -0.9988101124763489,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 9806,
+      "max": [
+        0.6335011124610901,
+        0.9702443480491638
+      ],
+      "min": [
+        0.014667739160358906,
+        0.02592983841896057
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 55944,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "SusiePhilpott (https://sketchfab.com/SusiePhilpott)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/mexican-flag-9f6eda070e4747cb8f1c1b9c11a05f0d",
+      "title": "Mexican Flag"
+    },
+    "generator": "Sketchfab-12.68.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 223776,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 78448,
+      "byteOffset": 223776,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 235344,
+      "byteOffset": 302224,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 156896,
+      "byteOffset": 537568,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 694464,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/MexFlag_baseColor.png"
+    },
+    {
+      "uri": "textures/MexFlag_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "MexFlag",
+      "normalTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.6
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Mex_Flag_02:Mesh_MexFlag_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        -0.999988853931427,
+        1.0486111756667619e-18,
+        -0.0047225248999893665,
+        0.0,
+        -0.0047225248999893665,
+        -2.2204213000063855e-16,
+        0.999988853931427,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.019211679697036743,
+        -2.4254252431589956e-17,
+        0.10923144221305847,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "a019c880c9f740b1b08500e041bffccb.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "name": "Mex_Flag_02:Mesh"
+    },
+    {
+      "mesh": 0,
+      "name": "Mex_Flag_02:Mesh_MexFlag_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ]
+}

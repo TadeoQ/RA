@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sombrero de Charro
+* source:	https://sketchfab.com/3d-models/sombrero-de-charro-72e69a423723445680118348c03c1032
+* author:	israsan (https://sketchfab.com/israsan)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sombrero de Charro" (https://sketchfab.com/3d-models/sombrero-de-charro-72e69a423723445680118348c03c1032) by israsan (https://sketchfab.com/israsan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
